@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rudy Reeves-McHugh Tutoring</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --white: #ffffff;
+      --dim: rgba(255,255,255,0.45);
+      --rule: rgba(255,255,255,0.10);
+      --page-max: 680px;
+      --gap: 30px;
+    }
+
+    html, body {
+      background: #000000;
+      color: var(--white);
+      font-family: -apple-system, 'SF Pro Text', 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    body {
+      padding: 35px 32px 35px;
+    }
+
+    /* ── Page container ── */
+    .page {
+      max-width: var(--page-max);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding-bottom: 0px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.1;
+    }
+
+    .hero .subtitle {
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 400;
+      color: var(--dim);
+      letter-spacing: 0.01em;
+      display: inline-block;
+      position: relative;
+      padding-bottom: 6px;
+    
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--rule);
+    }
+
+    /* ── Section ── */
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title.centred {
+      text-align: center;
+    }
+
+    /* ── Detail rows ── */
+    .detail-block {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .detail-block p {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--dim);
+      line-height: 1.6;
+    }
+
+    .detail-block .field {
+      display: flex;
+      gap: 8px;
+    }
+
+    .detail-block .label {
+      color: var(--white);
+      font-weight: 500;
+      min-width: 120px;
+    }
+
+    .detail-block .value {
+      color: var(--dim);
+    }
+
+
+    /* ── Mission body ── */
+    .mission-body {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--dim);
+      line-height: 1.8;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.18);
+      letter-spacing: 0.04em;
+      padding-top: 0px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+      <h1>Rudy Reeves-McHugh Tutoring</h1>
+      <p class="subtitle">Thanks for booking! Here is some info you may need:</p>
+    </div>
+
+    <hr />
+
+    <!-- Contact info -->
+    <div class="section">
+      <p class="section-title">Contact info</p>
+      <div class="detail-block">
+        <div class="field">
+          <span class="label">Email:</span>
+          <span class="value">r-m_sqrd@proton.me</span>
+        </div>
+        <div class="field">
+          <span class="label">WhatsApp:</span>
+          <span class="value">+447954163035</span>
+        </div>
+        <p>Feel free to get in touch whether it's about re-arranging sessions, info about the student, or a quick question.</p>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Bank details -->
+    <div class="section">
+      <p class="section-title">Bank details for payment</p>
+      <div class="detail-block">
+        <div class="field">
+          <span class="label">Account holder:</span>
+          <span class="value">Rudy McHugh</span>
+        </div>
+        <div class="field">
+          <span class="label">Account #:</span>
+          <span class="value">33795767</span>
+        </div>
+        <div class="field">
+          <span class="label">Sort code:</span>
+          <span class="value">60-83-71</span>
+        </div>
+        <p>Please pay either weekly or biweekly. Or subscribe through PayPal below to automate the weekly payments.</p>
+      </div>
+
+      <div id="paypal-button-container-P-7VJ84879NF2362711NHK4NAQ"></div>
+      <script src="https://www.paypal.com/sdk/js?client-id=ASA1zIoUwYEcgJ9dRFMBzgRWWHw6QgbH07jBuYByDBEoTeu9dxJZcVpFnRo2GAxf0xQjirR46EwxvWTQ&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+      <script>
+        paypal.Buttons({
+            style: {
+                shape: 'pill',
+                color: 'white',
+                layout: 'horizontal',
+                label: 'subscribe'
+            },
+            createSubscription: function(data, actions) {
+              return actions.subscription.create({
+                plan_id: 'P-7VJ84879NF2362711NHK4NAQ'
+              });
+            },
+            onApprove: function(data, actions) {
+              alert(data.subscriptionID);
+            }
+        }).render('#paypal-button-container-P-7VJ84879NF2362711NHK4NAQ');
+      </script>
+
+    </div>
+
+    <hr />
+
+    <!-- Mission -->
+    <div class="section">
+      <p class="section-title centred">My Mission:</p>
+      <p class="mission-body">
+        I am dedicated to delivering effective and enjoyable tuition for every student. Not only am I looking to help young people improve their scores on grades, but also foster an appreciation for maths, and a clearer understanding of how fun it can be! Any extra info about a student is always helpful for me to tailor our sessions better, and get the most out of them; it could be academic or personal. If there is anything you feel I can do better in our sessions please do let me know, and I'll always do my best to make adjustments. I'm excited to be getting started , and I hope you get exactly what you're looking for in the sessions.
+     </p>
+    </div>
+
+    <footer>© Rudy Reeves-McHugh Tutoring</footer>
+
+  </div>
+
+</body>
+</html>
