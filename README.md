@@ -1,2 +1,2 @@
 # sqrd-webdev.github.io
-Rudy Reeves-McHugh Tutoring Onboarding Site
+sqrd webdev landing page
